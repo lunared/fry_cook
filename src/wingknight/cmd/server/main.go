@@ -37,6 +37,7 @@ func GET(w http.ResponseWriter, r *http.Request) {
 			Radius:    5.0,
 			Unit:      "mi",
 			WithCoord: true,
+			Count:     20,
 		}).Result()
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
